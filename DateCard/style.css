@@ -1,0 +1,43 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: rgb(202, 202, 201);
+}
+
+.card {
+    width: 300px;
+    background-color: #f5efef;
+    margin: 60px auto;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#day_num {
+    font-size: 12rem;
+    margin: 0;
+    line-height: 90%;
+    font-weight: 900;
+
+}
+
+#footer {
+    background-color: rgb(223, 223, 223);
+}
+
+#time {
+    display: flex;
+    font-size: 1.4rem;
+    padding: 16px;
+    justify-content: center;
+}
+#day_name {
+    padding-top: 16px;
+}
+#year_num {
+    
+    padding: 16px;
+}

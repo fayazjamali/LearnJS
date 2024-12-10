@@ -555,7 +555,7 @@ const getMonth = fullDateTime.getMonth();
 
 p1.textContent = `${getMonth}`
 
-let newNum = 15;
+let newNum = 13;
 switch (newNum) {
     case 1:
         p3.textContent = "January";
@@ -594,7 +594,9 @@ switch (newNum) {
         p3.textContent = "December";
         break;
     default:
+        DangerStyle(p3)
         p3.textContent = "You are wrong!";
+
 }
 
 
