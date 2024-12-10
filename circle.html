@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finder Circle</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      .container {
+        background-color: rgb(99, 168, 248);
+        color: white;
+        width: 300px;
+        margin: 60px auto;
+        border-radius: 10px;
+        padding: 16px;
+      }
+      .heading {
+        font-size: 26px;
+        color: white;
+      }
+
+      .left {
+        flex-grow: 50;
+        text-align: end;
+        padding-right: 20px;
+      }
+      .right {
+        padding-left: 20px;
+        flex-grow: 50;
+        font-weight: bold;
+      }
+
+      .left {
+        padding-right: 20px;
+        flex-grow: 50;
+      }
+
+      .data_parent {
+        display: flex;
+        justify-content: space-between;
+      }
+      .form {
+        margin: 12px 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .form input {
+        margin: 3px 0;
+        padding: 8px 6px;
+        border-radius: 3px;
+        border: none;
+      }
+      .child p {
+        margin: 12px 0;
+      }
+
+      .form #submit {
+        background-color: rgb(6, 135, 255);
+        color: white;
+        font-weight: bold;
+
+        border: none;
+      }
+
+      .form #submit:hover {
+        background-color: rgb(7, 105, 197);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Circumference Finder</h1>
+      <div class="form">
+        <label for="">What is Radius of your Circle? </label>
+        <input id="radius_input" type="number" max="999" />
+      </div>
+      <div class="data_parent">
+        <div class="left child">
+          <p class="data_label">Pi</p>
+          <p class="data_label">Radius</p>
+          <p class="data_label">Circumference</p>
+        </div>
+        <div class="right child">
+          <p class="pi data">3.14159</p>
+          <p id="radius" class="radius data">0</p>
+          <p id="cir" class="cir data">0</p>
+        </div>
+      </div>
+      <p
+        id="red_error"
+        style="color: rgb(255, 20, 20); font-size: 12px; visibility: hidden"
+      >
+        You Entered Long radius value which causing error, Try smaller value to
+        get result.
+      </p>
+    </div>
+    <script>
+      document.getElementById("radius_input").addEventListener("input", () => {
+        let radius = document.getElementById("radius_input").value;
+        radius = Number(radius).toExponential(5);
+        let pi = 3.14159;
+        let circumference = 2 * radius * pi;
+        circumference = circumference.toExponential(5);
+        document.getElementById("radius").textContent = radius;
+        document.getElementById("cir").textContent = circumference;
+        document.getElementById("red_error").style.visibility = "hidden";
+      });
+    </script>
+  </body>
+</html>

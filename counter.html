@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flat-icons@1.0.0/creative.min.css"
+    />
+    <title>Counter Project</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      label {
+        font-size: 12em;
+        display: block;
+        text-align: center;
+      }
+      .container {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+      }
+      button {
+        padding: 6px 16px;
+      }
+      .fas {
+        margin-right: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <label id="count_label" for="">0</label>
+    <div class="container">
+      <button id="dec"><i class="fas fa-minus"></i>Decrease</button>
+      <button id="res"><i class="fi fi-reset"></i>Reset</button>
+      <button id="inc"><i class="fas fa-plus"></i>Increase</button>
+    </div>
+
+    <script>
+      const dec = document.getElementById("dec");
+      const res = document.getElementById("res");
+      const inc = document.getElementById("inc");
+      const count_label = document.getElementById("count_label");
+      let count = 0;
+      dec.addEventListener("click", function () {
+        count--;
+        count_label.textContent = count;
+      });
+      res.addEventListener("click", function () {
+        count = 0;
+        count_label.textContent = count;
+      });
+
+      inc.addEventListener("click", function () {
+        count++;
+        count_label.textContent = count;
+      });
+    </script>
+  </body>
+</html>

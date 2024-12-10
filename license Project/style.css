@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+  }
+
+  .project {
+    width: 500px;
+    min-width: 314px;
+    margin: 36px auto;
+  }
+
+  .form,
+  .data {
+    padding-bottom: 0;
+  }
+  #heading {
+    margin-bottom: 12px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 6px;
+  }
+  .child {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .data {
+    margin: 12px 0;
+    padding-top: 0;
+  }
+  .data p {
+    margin: 6px 0;
+    font-size: 1rem;
+    border-radius: 3px;
+  }
+  button {
+    margin: 6px 0;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #3685fc;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: all 200ms;
+
+  }
+  button:hover {
+    background-color: rgb(21, 106, 235);
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  button:disabled {
+    background-color: rgb(133, 132, 132);
+    cursor: default;
+  }
+  #warning {
+    color: red;
+    font-size: 0.9rem;
+  }
+
+  input,
+  .data_p,
+  button {
+    padding: 6px;
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+
+  @media screen and (max-width: 516px){
+  .project {
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+  }
+  }
+
+  @media screen and (max-width: 484px) {
+    .container {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .child {
+        width: 100%;
+    }
+
+    #heading {
+        line-height: 100%;
+    }
+  }
